@@ -2,15 +2,17 @@
 title: "Presentation-panel"
 subtitle: "Xaringan Extra example with panelset"
 author: "Edward Hillenaar"
-institute: "RStudio, PBC"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+institute: "Total Health Foundation"
+date: "2022/06/07 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
     nature:
+      slideNumberFormat: "%Current"
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
+      ratio: 16:9
+      countIncrementalSlides: true
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +21,25 @@ library(ggplot2)
 library(palmerpenguins)
 library(kableExtra)
 library(tidyverse)
+library(xaringanthemer)
 ```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+  
+)
+```
+
+
+```{r}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+```
+
 
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
@@ -34,7 +54,7 @@ xaringanExtra::use_share_again()
 ```
 
 ---
-### Total Health Research
+### .blue[Total Health Research]
 
 ```{r, echo = FALSE}
 xaringanExtra::use_panelset()
@@ -65,6 +85,7 @@ plot1 <- ggplot(data = iris, aes(x = Petal.Length,
 plot1
 ```
 ]
+
 
 
 ]
