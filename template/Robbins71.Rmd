@@ -1,5 +1,5 @@
 ---
-title: "Steve Robbins youtube slides #71"
+title: "Steve Robbins youtube slides 71"
 subtitle: "Bergson and the Holographic Theory of Mind"
 author: "Edward Hillenaar"
 institute: "Total Health Foundation"
