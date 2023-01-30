@@ -101,6 +101,15 @@ embed_youtube("NHMip21Hkp0")
 ---
 
 ---
+```{r, echo=FALSE}
+library(vembedr)
+embed_youtube("4uDR9W8odzE")
+
+```
+
+---
+
+---
 
 ```{r}
 xaringanExtra::use_extra_styles()
