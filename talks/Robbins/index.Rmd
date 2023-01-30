@@ -230,9 +230,11 @@ See the next page for two HTML widgets.
 
 ---
 
+# Zwaag, Noord Holland in The Netherlands
+
 ```{r out.width='100%', fig.height=6, eval=require('leaflet')}
 library(leaflet)
-leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+leaflet() %>% addTiles() %>% setView(5.0666664, 52.666664, zoom = 17)
 ```
 
 ---
