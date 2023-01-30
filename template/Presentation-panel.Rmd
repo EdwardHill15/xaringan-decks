@@ -68,7 +68,7 @@ knitr::include_graphics("https://github.com/EdwardHill15/Data/blob/main/logo/Tot
 ```
 ]
 
-.panel[.panel-name[Data]
+.panel[.panel-name[Rscript]
 
 ```{r panel-chunk, fig.show='hide'}
 plot1 <- ggplot(data = iris, aes(x = Petal.Length, 
