@@ -1,9 +1,9 @@
 ---
-title: "Presentation-panel"
+title: "Consciousness"
 subtitle: "Xaringan Extra example with panelset"
 author: "Edward Hillenaar"
 institute: "Total Health Foundation"
-date: "2022/06/07 (updated: `r Sys.Date()`)"
+date: "2023/01/30 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
