@@ -18,7 +18,7 @@ options(htmltools.dir.version = FALSE)
 library(vembedr)
 ```
 
----
+
 # Steve Robbins Youtube lesson 71
 
 ```{r, echo = FALSE}
@@ -238,6 +238,18 @@ leaflet() %>% addTiles() %>% setView(5.0666664, 52.666664, zoom = 17)
 ```
 
 ---
+
+# La Coruna, Spain
+
+```{r out.width='100%', fig.height=6, eval=require('leaflet')}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(-8.411540, 43.362343, zoom = 17)
+```
+
+---
+
+
+
 
 ```{r eval=require('DT'), tidy=FALSE}
 DT::datatable(
