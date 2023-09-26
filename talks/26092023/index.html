@@ -4,13 +4,12 @@
     <title>Xaringan 26092023</title>
     <meta charset="utf-8" />
     <meta name="author" content="Edward Hillenaar" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
-    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
-    <script src="libs/tile-view/tile-view.js"></script>
-    <link href="libs/panelset/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset/panelset.js"></script>
+    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <link href="index_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="index_files/tile-view/tile-view.js"></script>
+    <link href="index_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="index_files/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -37,8 +36,15 @@ class: center, middle, inverse, title-slide
 
 
 
----
-class: center, middle
+
+
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+  color: black;
+  background-color: lightblue;
+}
+&lt;/style&gt;
+
 
 # Hi there, I'm Edward
 
@@ -52,10 +58,15 @@ class: center, middle
 ![waterfall2](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60)
 
 ---
+class: top left
+background-color: black
+background-image: url(milk.avif)
+background-size: 400px 500px
+background-position: top right
 
-# HTML list
-
-&lt;ul&gt;
+.shopping[&lt;h1&gt;Shopping list&lt;/h1&gt;
+]
+.milk[&lt;h2&gt;&lt;ul&gt;
   &lt;li&gt;kaas&lt;/li&gt;
   &lt;li&gt;melk
         &lt;ol&gt;
@@ -65,8 +76,12 @@ class: center, middle
         &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;boter&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/h2&gt;
+]
 
+&lt;style&gt;
+
+&lt;/style&gt;
 ---
 
 # Incremental reveals
@@ -103,7 +118,7 @@ I like R language
 
 # Plot iris data
 
-&lt;img src="index_files/figure-html/unnamed-chunk-1-1.png" width="504" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-2-1.png" width="504" /&gt;
 
 ---
 class: center, middle
@@ -189,15 +204,46 @@ class: center, middle
 ]
 .panel[.panel-name[Plot1]
 
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="50%" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.png" width="50%" /&gt;
 ]
 
 ]
+
+---
+
+.compliment[
+.Iris-Flower-blue[Iris-Flowers] are beautiful
+]
+
+&lt;style&gt;
+
+&lt;/style&gt;
+
+.iris-box[
+
+]
+
+&lt;style&gt;
+
+&lt;/style&gt;
+
+---
+class: top left
+background-image: url(iris.avif)
+background-size: contain
+
+.beautiful[&lt;h1&gt;Beautiful Iris&lt;/h1&gt;
+
+]
+
+&lt;style&gt;
+
+&lt;/style&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
+"highlightStyle": "solarized-dark",
 "highlightLines": true,
 "countIncrementalSlides": false
 });

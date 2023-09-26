@@ -6,14 +6,20 @@ institute: "RStudio, PBC"
 date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["xaringan-themer.css"]
     nature:
-      highlightStyle: github
+      highlightStyle: solarized-dark
       highlightLines: true
       countIncrementalSlides: false
+    #css: "style.css"
+    # lib_dir: libs
+    # nature:
+    #   highlightStyle: github
+    #   highlightLines: true
+    #   countIncrementalSlides: false
 ---
 
-```{r setup, echo=FALSE, include=FALSE}
+```{r setup, include=FALSE, warning=FALSE}
 options(htmltools.dir.version = FALSE)
 library(ggplot2)
 library(palmerpenguins)
@@ -25,8 +31,23 @@ library(DT)
 use_tile_view()
 ```
 
----
-class: center, middle
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{css, echo=FALSE}
+.remark-slide-content {
+  color: black;
+  background-color: lightblue;
+}
+```
+
 
 # Hi there, I'm Edward
 
@@ -40,10 +61,15 @@ class: center, middle
 ![waterfall2](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
 
 ---
+class: top left
+background-color: black
+background-image: url(milk.avif)
+background-size: 400px 500px
+background-position: top right
 
-# HTML list
-
-<ul>
+.shopping[<h1>Shopping list</h1>
+]
+.milk[<h2><ul>
   <li>kaas</li>
   <li>melk
         <ol>
@@ -53,8 +79,12 @@ class: center, middle
         </ol>
   </li>
   <li>boter</li>
-</ul>
+</ul></h2>
+]
 
+<style>
+
+</style>
 ---
 
 # Incremental reveals
@@ -141,3 +171,34 @@ plot1
 ]
 
 ]
+
+---
+
+.compliment[
+.Iris-Flower-blue[Iris-Flowers] are beautiful
+]
+
+<style>
+
+</style>
+
+.iris-box[
+
+]
+
+<style>
+
+</style>
+
+---
+class: top left
+background-image: url(iris.avif)
+background-size: contain
+
+.beautiful[<h1>Beautiful Iris</h1>
+
+]
+
+<style>
+
+</style>
