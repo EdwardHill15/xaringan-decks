@@ -29,6 +29,14 @@ library(xaringanExtra)
 library(xaringanthemer)
 library(DT)
 use_tile_view()
+library(xaringanExtra)
+library(xaringanthemer)
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(
+  #share_button = "none",
+  foreground = "orange",
+  background = "blue"
+)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
