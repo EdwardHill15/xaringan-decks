@@ -1,0 +1,143 @@
+---
+title: "Xaringan 26092023"
+subtitle: "Xaringan Extra example with panelset"
+author: "Edward Hillenaar"
+institute: "RStudio, PBC"
+date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, echo=FALSE, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(ggplot2)
+library(palmerpenguins)
+library(kableExtra)
+library(tidyverse)
+library(xaringanExtra)
+library(xaringanthemer)
+library(DT)
+use_tile_view()
+```
+
+---
+class: center, middle
+
+# Hi there, I'm Edward
+
+![waterfall](https://images.unsplash.com/photo-1519582149095-fe7d19b2a3d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+# This is a second picture of a waterfall
+
+![waterfall2](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+
+# HTML list
+
+<ul>
+  <li>kaas</li>
+  <li>melk
+        <ol>
+          <li>volle melk</li>
+          <li>halfvolle melk</li>
+          <li>magere melk</li>
+        </ol>
+  </li>
+  <li>boter</li>
+</ul>
+
+---
+
+# Incremental reveals
+
+# Hi there
+
+My name is Edward
+
+--
+
+I like R language
+
+--
+
+[Totale Gezondheid](https://www.totalegezondheid.com)
+
+---
+
+<h1>Two-columns</h1>
+
+.pull-left[
+
+<h3>*first picture waterfall*</h3>
+![](https://images.unsplash.com/photo-1519582149095-fe7d19b2a3d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+]
+
+.pull-right[
+
+<h3>*second picture waterfall*</h3>
+![](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+]
+
+---
+
+# Plot iris data
+
+```{r echo=FALSE, fig.retina=3}
+iris %>% 
+  ggplot(aes(Petal.Length,Petal.Width, color = Species)) +
+  geom_point(size = 3)
+```
+
+---
+class: center, middle
+
+```{r, out.width="25%", echo=FALSE}
+knitr::include_graphics("https://github.com/EdwardHill15/Data/blob/main/logo/Total%20Health%20Logo%20New%20maart%202014.jpg?raw=true")
+```
+
+```{r, echo = FALSE}
+xaringanExtra::use_panelset()
+```
+
+.panelset[
+.panel[.panel-name[Image]
+
+```{r, out.width="80%", echo=FALSE}
+knitr::include_graphics("https://images.unsplash.com/photo-1540163502599-a3284e17072d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXJpc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60")
+```
+]
+
+.panel[.panel-name[Code]
+
+```{r panel-chunk, fig.show='hide'}
+plot1 <- ggplot(data = iris, aes(x = Petal.Length, #<<
+                        y = Petal.Width, 
+                        col = Species, 
+                        shape = Species)) +
+  geom_point(size = 5)
+```
+]
+
+.panel[.panel-name[Data]
+```{r echo=FALSE}
+knitr::kable(head(iris), format = 'html')
+# datatable(iris)
+```
+]
+.panel[.panel-name[Plot1]
+
+```{r, echo=FALSE, out.width="50%", fig.retina=3}
+plot1
+```
+]
+
+]
