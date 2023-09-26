@@ -28,13 +28,8 @@ library(tidyverse)
 library(xaringanExtra)
 library(xaringanthemer)
 library(DT)
+library(vembedr)
 use_tile_view()
-xaringanExtra::use_share_again()
-xaringanExtra::style_share_again(
-  #share_button = "none",
-  foreground = "orange",
-  background = "blue"
-)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -208,3 +203,33 @@ background-size: contain
 <style>
 
 </style>
+
+---
+class: center
+
+.consciousness[<h1>Consciousness and Outcome Factors</h1>
+]
+<style>
+
+</style>
+
+```{r, out.width="80%", echo=FALSE}
+knitr::include_graphics("consciousness_combined.gif")
+```
+
+---
+class: center, middle
+
+```{r embed_youtube, echo=FALSE, out.width="100%"}
+embed_youtube(
+"NHMip21Hkp0",
+width = 900,
+height = 700,
+ratio = c("16by9", "4by3"),
+frameborder = 0,
+allowfullscreen = TRUE,
+query = NULL
+)
+```
+
+
