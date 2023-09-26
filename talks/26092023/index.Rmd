@@ -1,5 +1,5 @@
 ---
-title: "Xaringan 26092023"
+title: "Planet earth"
 subtitle: "Xaringan Extra example with panelset"
 author: "Edward Hillenaar"
 institute: "RStudio, PBC"
@@ -57,7 +57,10 @@ style_mono_accent(
 ]
 
 ---
-class: center, middle
+class: top, center
+background-color: black
+background-size: 400px 500px
+background-position: top right
 
 # This is a second picture of a waterfall
 

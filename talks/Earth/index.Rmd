@@ -1,0 +1,116 @@
+---
+title: "Planet Earth"
+subtitle: "Xaringan Extra example with panelset"
+author: "Edward Hillenaar"
+institute: "Total Health Foundation"
+date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css"]
+    nature:
+      highlightStyle: solarized-dark
+      highlightLines: true
+      countIncrementalSlides: false
+    #css: "style.css"
+    # lib_dir: libs
+    # nature:
+    #   highlightStyle: github
+    #   highlightLines: true
+    #   countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+library(ggplot2)
+library(palmerpenguins)
+library(kableExtra)
+library(tidyverse)
+library(xaringanExtra)
+library(xaringanthemer)
+library(DT)
+library(vembedr)
+use_tile_view()
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{css, echo=FALSE}
+.remark-slide-content {
+  color: white;
+  background-color: black;
+}
+```
+
+.center[<h1>Planet Earth</h1>
+]
+  
+.center[![Earth1](https://images.unsplash.com/photo-1589225529399-8705282f98e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+]
+
+---
+class: center, middle
+
+![Earth3](https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+![Earth4](https://images.unsplash.com/photo-1540198163009-7afda7da2945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+![Earth5](https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+![Earth6](https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+![Earth7](https://images.unsplash.com/photo-1632395627760-72e6eca7f9c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+
+---
+class: center, middle
+
+![Earth8](https://images.unsplash.com/photo-1589225529399-8705282f98e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+![Earth9](https://images.unsplash.com/photo-1542652184-04fe4ec9d4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+![Earth10](https://plus.unsplash.com/premium_photo-1661881922935-bd57fc0c6660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGVhcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+
+---
+class: center, middle
+
+```{r embed_youtube, echo=FALSE, out.width="100%"}
+embed_youtube(
+"jFLTHSEKPoQ",
+width = 600,
+height = 400,
+ratio = c("16by9", "4by3"),
+frameborder = 0,
+allowfullscreen = TRUE,
+query = NULL
+)
+```
+
+
+
+
