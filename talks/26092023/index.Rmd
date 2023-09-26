@@ -49,10 +49,12 @@ style_mono_accent(
 }
 ```
 
+.edward[.center[<h1>Hi there, I'm Edward</h1>
+]
+]
 
-# Hi there, I'm Edward
-
-![waterfall](https://images.unsplash.com/photo-1519582149095-fe7d19b2a3d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+.center[![waterfall](https://images.unsplash.com/photo-1501908734255-16579c18c25f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdhdGVyZmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60)
+]
 
 ---
 class: center, middle
@@ -82,45 +84,42 @@ background-position: top right
   <li>boter</li>
 </ul></h2>
 ]
-
-<style>
-
-</style>
 ---
+class: top, center
 
 # Incremental reveals
 
-# Hi there
-
-My name is Edward
+<h2>My name is Edward</h2>
 
 --
 
-I like R language
+<h2>I like R language</h2>
 
 --
 
-[Totale Gezondheid](https://www.totalegezondheid.com)
+<h2><a href="https://www.totalegezondheid.com">This is my Website</a></h2>
 
 ---
+class: top, center
 
 <h1>Two-columns</h1>
 
 .pull-left[
 
-<h3>*first picture waterfall*</h3>
-![](https://images.unsplash.com/photo-1519582149095-fe7d19b2a3d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+<h3>*first column*</h3>
+![](https://images.unsplash.com/photo-1520637102912-2df6bb2aec6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhdGVyZmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60)
 ]
 
 .pull-right[
 
-<h3>*second picture waterfall*</h3>
+<h3>*second column*</h3>
 ![](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
 ]
 
 ---
+class: top, center
 
-# Plot iris data
+<h1>Plot iris data</h1>
 
 ```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
 iris %>% 
@@ -130,10 +129,6 @@ iris %>%
 
 ---
 class: center, middle
-
-```{r, out.width="25%", echo=FALSE}
-knitr::include_graphics("https://github.com/EdwardHill15/Data/blob/main/logo/Total%20Health%20Logo%20New%20maart%202014.jpg?raw=true")
-```
 
 ```{r, echo = FALSE}
 xaringanExtra::use_panelset()
@@ -170,48 +165,21 @@ knitr::kable(head(iris), format = 'html')
 plot1
 ```
 ]
-
 ]
 
 ---
-
-.compliment[
-.Iris-Flower-blue[Iris-Flowers] are beautiful
-]
-
-<style>
-
-</style>
-
-.iris-box[
-
-]
-
-<style>
-
-</style>
-
----
-class: top left
+class: center, top
 background-image: url(iris.avif)
 background-size: contain
 
 .beautiful[<h1>Beautiful Iris</h1>
-
 ]
-
-<style>
-
-</style>
 
 ---
 class: center
 
 .consciousness[<h1>Consciousness and Outcome Factors</h1>
 ]
-<style>
-
-</style>
 
 ```{r, out.width="80%", echo=FALSE}
 knitr::include_graphics("consciousness_combined.gif")
