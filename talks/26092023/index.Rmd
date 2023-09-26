@@ -122,7 +122,7 @@ I like R language
 
 # Plot iris data
 
-```{r echo=FALSE, fig.retina=3}
+```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
 iris %>% 
   ggplot(aes(Petal.Length,Petal.Width, color = Species)) +
   geom_point(size = 3)
@@ -140,7 +140,7 @@ xaringanExtra::use_panelset()
 ```
 
 .panelset[
-.panel[.panel-name[Image]
+.panel[.panel-name[Iris]
 
 ```{r, out.width="80%", echo=FALSE}
 knitr::include_graphics("https://images.unsplash.com/photo-1540163502599-a3284e17072d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXJpc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60")
@@ -150,7 +150,7 @@ knitr::include_graphics("https://images.unsplash.com/photo-1540163502599-a3284e1
 .panel[.panel-name[Code]
 
 ```{r panel-chunk, fig.show='hide'}
-plot1 <- ggplot(data = iris, aes(x = Petal.Length, #<<
+plot1 <- ggplot(data = iris, aes(x = Petal.Length,
                         y = Petal.Width, 
                         col = Species, 
                         shape = Species)) +
@@ -159,14 +159,14 @@ plot1 <- ggplot(data = iris, aes(x = Petal.Length, #<<
 ]
 
 .panel[.panel-name[Data]
-```{r echo=FALSE}
+```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
 knitr::kable(head(iris), format = 'html')
 # datatable(iris)
 ```
 ]
-.panel[.panel-name[Plot1]
+.panel[.panel-name[Plot]
 
-```{r, echo=FALSE, out.width="50%", fig.retina=3}
+```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
 plot1
 ```
 ]
