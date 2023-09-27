@@ -2,7 +2,7 @@
 title: "Xaringan Deck 26092023"
 subtitle: "Xaringan Extra example with panelset"
 author: "Edward Hillenaar"
-institute: "RStudio, PBC"
+institute: "Total Health Foundation"
 date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
 output:
   xaringan::moon_reader:
@@ -137,7 +137,6 @@ iris %>%
 ```
 
 ---
-class: top, center
 
 ## Panelset with Iris Data
 
@@ -161,10 +160,10 @@ iris %>%
   summarise_all(.funs = mean) 
 
 plot <- ggplot(data = iris, aes(x = Petal.Length,
-                        y = Petal.Width, 
-                        col = Species, 
-                        shape = Species)) +
-  geom_point(size = 5)
+            y = Petal.Width, 
+            col = Species, 
+            shape = Species)) +
+        geom_point(size = 5)
 ```
 ]
 
