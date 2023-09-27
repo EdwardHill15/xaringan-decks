@@ -6,17 +6,17 @@ institute: "Total Health Foundation"
 date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
 output:
   xaringan::moon_reader:
-    css: ["xaringan-themer.css"]
-    nature:
-      highlightStyle: solarized-dark
-      highlightLines: true
-      countIncrementalSlides: false
-    #css: "style.css"
-    # lib_dir: libs
+    # css: ["xaringan-themer.css"]
     # nature:
-    #   highlightStyle: github
+    #   highlightStyle: solarized-dark
     #   highlightLines: true
     #   countIncrementalSlides: false
+    css: "style.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
 ---
 
 ```{r setup, include=FALSE, warning=FALSE}

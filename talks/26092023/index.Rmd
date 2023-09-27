@@ -6,13 +6,13 @@ institute: "RStudio, PBC"
 date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
 output:
   xaringan::moon_reader:
-    css: ["xaringan-themer.css"]
-    nature:
-      highlightStyle: solarized-dark
-      highlightLines: true
-      countIncrementalSlides: false
-    #css: "style.css"
-    # lib_dir: libs
+    # css: ["xaringan-themer.css"]
+    # nature:
+    #   highlightStyle: solarized-dark
+    #   highlightLines: true
+    #   countIncrementalSlides: false
+    css: [default, style.css]
+    #lib_dir: libs
     # nature:
     #   highlightStyle: github
     #   highlightLines: true
@@ -105,18 +105,24 @@ class: top, center
 ---
 class: top, center
 
-<h1>Two-columns</h1>
+# Two columns
+
 
 .pull-left[
-
-<h3>*first column*</h3>
-![](https://images.unsplash.com/photo-1520637102912-2df6bb2aec6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhdGVyZmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60)
+## First
+```{r, out.width="67%", echo=FALSE}
+knitr::include_graphics("https://images.unsplash.com/photo-1649842699527-e5b1b557e3d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aXJpcyUyMHZpcmdpbmljYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60")
+```
 ]
 
-.pull-right[
 
-<h3>*second column*</h3>
-![](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
+.pull-right[
+## Second
+```{r, echo=FALSE, fig.retina=3}
+iris %>% 
+  ggplot(aes(Petal.Length, Petal.Width, col = Species)) +
+  geom_point(size = 4)
+```
 ]
 
 ---
@@ -131,7 +137,9 @@ iris %>%
 ```
 
 ---
-class: center, middle
+class: top, center
+
+## Panelset with Iris Data
 
 ```{r, echo = FALSE}
 xaringanExtra::use_panelset()
@@ -148,7 +156,11 @@ knitr::include_graphics("https://images.unsplash.com/photo-1540163502599-a3284e1
 .panel[.panel-name[Code]
 
 ```{r panel-chunk, fig.show='hide'}
-plot1 <- ggplot(data = iris, aes(x = Petal.Length,
+iris %>% 
+  group_by(Species) %>% 
+  summarise_all(.funs = mean) 
+
+plot <- ggplot(data = iris, aes(x = Petal.Length,
                         y = Petal.Width, 
                         col = Species, 
                         shape = Species)) +
@@ -157,15 +169,17 @@ plot1 <- ggplot(data = iris, aes(x = Petal.Length,
 ]
 
 .panel[.panel-name[Data]
-```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
-knitr::kable(head(iris), format = 'html')
-# datatable(iris)
+```{r echo=FALSE}
+iris %>% 
+  group_by(Species) %>% 
+  summarise_all(.funs = mean) %>% 
+  datatable()
 ```
 ]
 .panel[.panel-name[Plot]
 
 ```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
-plot1
+plot
 ```
 ]
 ]
