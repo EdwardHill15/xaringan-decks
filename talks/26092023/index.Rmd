@@ -282,7 +282,7 @@ class: center
 <h3>- Petal width: <span style="color:blue">`r round(mean(iris$Petal.Width),1)`</span></h3>
 <h3>- Sepal length: <span style="color: blue">`r round(mean(iris$Sepal.Length),1)`</span></h3>
 <h3>- Sepal width: <span style="color:blue">`r round(mean(iris$Sepal.Width),1)`</span></h3>
-<h3>- Number of Records in the Iris Database: <span style="color:blue">`r nrow(iris)`</span></h3>
+<h3>- The sample of iris data is $n =$ <span style="color:blue">`r nrow(iris)`</span>
 
 
 
