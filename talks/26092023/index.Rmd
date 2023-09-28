@@ -6,18 +6,28 @@ institute: "Total Health Foundation"
 date: "2023-09-26 (updated: `r format(Sys.time(), '%d %B, %Y')`)"
 output:
   xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    css: [default, style.css]
     # css: ["xaringan-themer.css"]
     # nature:
     #   highlightStyle: solarized-dark
     #   highlightLines: true
     #   countIncrementalSlides: false
-    css: [default, style.css]
-    #lib_dir: libs
-    # nature:
-    #   highlightStyle: github
-    #   highlightLines: true
-    #   countIncrementalSlides: false
 ---
+
+background-image: url('https://images.unsplash.com/photo-1695582341851-8cc6eba24e1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+background-size: cover
+
+
+<h1>.title[The Vibrational Mind<br>by<br>Edward Hillenaar</h1>
+
+]
 
 ```{r setup, include=FALSE, warning=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -29,7 +39,9 @@ library(xaringanExtra)
 library(xaringanthemer)
 library(DT)
 library(vembedr)
+library(emoji)
 use_tile_view()
+#remotes::install_github('yihui/xaringan', upgrade = TRUE, force = T)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -49,6 +61,7 @@ style_mono_accent(
 }
 ```
 
+---
 .edward[.center[<h1>Hi there, I'm Edward</h1>
 ]
 ]
@@ -67,7 +80,7 @@ background-position: top right
 ![waterfall2](https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60)
 
 ---
-class: top left
+class: top, left
 background-color: black
 background-image: url(milk.avif)
 background-size: 400px 500px
@@ -168,13 +181,26 @@ plot <- ggplot(data = iris, aes(x = Petal.Length,
 ]
 
 .panel[.panel-name[Data]
+```{r echo=FALSE, eval=require('DT'), tidy=FALSE}
+# iris %>% 
+#   head(10) %>% 
+#   kbl()
+table2 <- datatable(iris,
+  fillContainer = FALSE, options = list(pageLength = 8))
+table2
+```
+]
+
+.panel[.panel-name[Mean]
 ```{r echo=FALSE}
-iris %>% 
+table1 <- iris %>% 
   group_by(Species) %>% 
   summarise_all(.funs = mean) %>% 
   datatable()
+table1
 ```
 ]
+
 .panel[.panel-name[Plot]
 
 ```{r echo=FALSE, fig.retina=3, fig.height=6, fig.width=10, dev='svg'}
@@ -215,5 +241,48 @@ allowfullscreen = TRUE,
 query = NULL
 )
 ```
+
+---
+
+background-image: url('https://images.unsplash.com/photo-1695582341851-8cc6eba24e1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+background-size: cover
+
+
+# Nice picture
+
+---
+
+# Footnotes in Xaringan
+
+<h5>.footnote[Dit is een willekeurige footnote in Xaringan. Het slaat helemaal nergens op wat ik hier nu schrijf,<br>maar het is bedoeld om jullie een beeld te geven van hoe je footnotes in Xaringan noteert]</h5>
+
+---
+# https://github.com/hadley/emo
+
+# Add emojis `r emo::ji("smile")`, `r emo::ji("poop")`, `r emo::ji("cry")`
+
+---
+
+
+```{r echo=FALSE}
+table1 <- iris %>% 
+  group_by(Species) %>% 
+  summarise_all(.funs = mean) %>% 
+  datatable()
+table1
+```
+table1: `r table1`
+
+---
+class: center
+
+<h1><span style="color:blue">Average Values in Iris Data</h1></span><br>
+
+<h3>- Petal length: <span style="color:blue">`r round(mean(iris$Petal.Length),1)`</span></h3>
+<h3>- Petal width: <span style="color:blue">`r round(mean(iris$Petal.Width),1)`</span></h3>
+<h3>- Sepal length: <span style="color: blue">`r round(mean(iris$Sepal.Length),1)`</span></h3>
+<h3>- Sepal width: <span style="color:blue">`r round(mean(iris$Sepal.Width),1)`</span></h3>
+
+
 
 
