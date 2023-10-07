@@ -1,3 +1,8 @@
+#head-title {
+   font-size: 3rem;
+   font-family: 'Playfair Display SC', serif;
+}
+
 .iris-box {
   background-color: #4D8DC9;
   background-image: url(https://images.unsplash.com/photo-1540163502599-a3284e17072d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXJpc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60/500/300);
@@ -43,4 +48,21 @@
     text-align: center;
     color: blue;
     margin-top: 50px; 
+}
+
+.poster {
+  color: gray;
+  font-family: 'Satisfy', cursive;
+}
+
+.motivation-img {
+  width: 400px;
+}
+
+.welcome-website {
+  font-family: 'Satisfy', cursive;
+}
+
+.Ed-home {
+  font-family: 'Satisfy', cursive;
 }
