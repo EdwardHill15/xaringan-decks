@@ -316,7 +316,7 @@ class: center
 ---
 class: center
 
-# Use website www.picsum.photos to visualize random photos as placeholders
+<h1 class="picsum-photos" >Use website www.picsum.photos to visualize random photos as placeholders</h1>
 
 <img src="https://picsum.photos/500" alt="random picture from picsum.photos"/>
 
